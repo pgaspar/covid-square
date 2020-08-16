@@ -14,6 +14,13 @@ This is a React app initialized via `create-react-app`. You can run it locally l
 yarn start
 ```
 
+## TODO
+
+- [ ] Add legend with the actual numbers
+- [ ] Show when the information was last updated
+- [ ] Improve routing - maybe use country codes?
+- [ ] Make it prettier (submit a PR if you have ideas!)
+
 ## Acknowledgements
 
 * Inspired by [u/data-artist](https://www.reddit.com/r/dataisbeautiful/comments/ia4waq/oc_covid_cases_and_deaths_in_the_us_as_a)
