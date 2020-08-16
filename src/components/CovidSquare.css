@@ -9,3 +9,10 @@
 .CovidSquare-deaths {
   background-color: #ef1432;
 }
+
+@media screen and (max-width: 620px) {
+  .CovidSquare {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}

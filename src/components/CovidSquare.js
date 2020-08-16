@@ -12,13 +12,13 @@ function CovidSquare({ width = 500, total, cases, deaths }) {
   };
 
   const casesStyle = {
-    width: `${Math.sqrt(casesPixels)}px`,
-    height: `${Math.sqrt(casesPixels)}px`,
+    width: `${Math.sqrt(casesPixels / totalPixels) * 100}%`,
+    height: `${Math.sqrt(casesPixels / totalPixels) * 100}%`,
   };
 
   const deathsStyle = {
-    width: `${Math.sqrt(deathsPixels)}px`,
-    height: `${Math.sqrt(deathsPixels)}px`,
+    width: `${Math.sqrt(deathsPixels / casesPixels) * 100}%`,
+    height: `${Math.sqrt(deathsPixels / casesPixels) * 100}%`,
   };
 
   return (
