@@ -2,7 +2,9 @@
 
 Visualize the number of Covid19 cases and deaths compared to the total population of a country.
 
-<a href="#">
+[**Try it online on Netlify! 🚀**](https://covid-square.netlify.app)
+
+<a href="https://covid-square.netlify.app">
   <img alt="Example Screenshot of React Square" src="public/example.png">
 </a>
 
