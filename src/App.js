@@ -6,7 +6,10 @@ import Select from 'react-select';
 import { countryOptions } from './Countries.js';
 
 function App() {
-  const [country, setCountry] = useState('Portugal');
+  const urlParams = new URLSearchParams(window.location.search);
+  const defaultCountry = urlParams.get('country') || 'Portugal';
+
+  const [country, setCountry] = useState(defaultCountry);
   const [data, setData] = useState({});
   const { cases, deaths, population } = data;
 
@@ -22,6 +25,7 @@ function App() {
   }, [country]);
 
   const onSelect = (e) => {
+    window.history.pushState({}, null, `?country=${e.value}`);
     setCountry(e.value);
   };
 
