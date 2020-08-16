@@ -1,0 +1,11 @@
+.CovidSquare {
+  background-color: #38a169;
+}
+
+.CovidSquare-cases {
+  background-color: #e8e5a7;
+}
+
+.CovidSquare-deaths {
+  background-color: #ef1432;
+}
