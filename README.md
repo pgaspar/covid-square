@@ -21,6 +21,7 @@ yarn start
 ## TODO
 
 - [ ] Add legend with the actual numbers
+- [ ] Setup SSR
 - [ ] Show when the information was last updated
 - [ ] Improve routing - maybe use country codes?
 - [ ] Fix viewpoint changing when clicking on the select (on mobile)

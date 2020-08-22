@@ -14,11 +14,6 @@ function Head({ country }) {
       <meta name='author' content={author} />
       <meta name='description' content={description} />
 
-      <meta property='og:url' content={publicUrl} />
-      <meta property='og:title' content={title} />
-      <meta property='og:description' content={description} />
-      <meta property='og:image' content={`${publicUrl}/logo512.png`} />
-
       <link rel='canonical' href={publicUrl} />
     </Helmet>
   );
