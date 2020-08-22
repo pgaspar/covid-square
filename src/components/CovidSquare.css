@@ -1,5 +1,7 @@
 .CovidSquare {
   background-color: #38a169;
+  width: 500px;
+  height: 500px;
 }
 
 .CovidSquare-cases {
@@ -12,7 +14,7 @@
 
 @media screen and (max-width: 620px) {
   .CovidSquare {
-    width: 300px !important;
-    height: 300px !important;
+    width: 300px;
+    height: 300px;
   }
 }
