@@ -38,7 +38,7 @@ function App() {
           placeholder='Select a country...'
           className='App-select'
         />
-        <h1>{`Covid cases and deaths in ${country}`}</h1>
+        <h1>{`Covid cases and deaths: ${country}`}</h1>
         <CovidSquare total={population} cases={cases} deaths={deaths} />
       </header>
     </div>
