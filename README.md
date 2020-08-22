@@ -20,7 +20,6 @@ yarn start
 
 ## TODO
 
-- [ ] Add meta tags based on current route (`react-helment`)
 - [ ] Add legend with the actual numbers
 - [ ] Show when the information was last updated
 - [ ] Improve routing - maybe use country codes?
