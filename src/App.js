@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import CovidSquare from './components/CovidSquare.js';
+import Head from './components/Head.js';
 import axios from 'axios';
 import Select from 'react-select';
 import { countryOptions } from './Countries.js';
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Head country={country} />
       <header className='App-header'>
         <Select
           options={countryOptions}
