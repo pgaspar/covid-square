@@ -6,14 +6,14 @@ import axios from 'axios';
 import Select from 'react-select';
 import { countryOptions, findCountry } from './Countries.js';
 
-const FALLBACK_COUNTRY = 'portugal';
+const FALLBACK_COUNTRY = 'PRT';
 
 function App() {
   const urlParams = new URLSearchParams(window.location.search);
   let initialCountry = findCountry(urlParams.get('country'));
   if (!initialCountry) {
     initialCountry = findCountry(FALLBACK_COUNTRY);
-    window.history.replaceState({}, null, `?country=${initialCountry.slug}`);
+    window.history.replaceState({}, null, `?country=${initialCountry.code}`);
   }
 
   const [country, setCountry] = useState(initialCountry);
@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const result = await axios.get(
-        `https://disease.sh/v3/covid-19/countries/${country.name}`
+        `https://disease.sh/v3/covid-19/countries/${country.code}`
       );
 
       setData(result.data);
@@ -33,7 +33,7 @@ function App() {
 
   const onSelect = (e) => {
     const newCountry = findCountry(e.value) || findCountry(FALLBACK_COUNTRY);
-    window.history.pushState({}, null, `?country=${newCountry.slug}`);
+    window.history.pushState({}, null, `?country=${newCountry.code}`);
     setCountry(newCountry);
   };
 
