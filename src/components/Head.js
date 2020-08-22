@@ -5,8 +5,7 @@ function Head({ country }) {
   const title = `Covid Square: ${country}`;
   const author = 'Pedro Gaspar';
   const description = `Cases and deaths compared to total population`;
-  const publicUrl = process.env.PUBLIC_URL;
-  const twitter = '@pedrogaspar';
+  const publicUrl = process.env.URL || 'https://covid-square.netlify.app';
 
   return (
     <Helmet>
@@ -20,11 +19,7 @@ function Head({ country }) {
       <meta property='og:description' content={description} />
       <meta property='og:image' content={`${publicUrl}/logo512.png`} />
 
-      <meta name='twitter:card' content='summary' />
-      <meta name='twitter:creator' content={twitter} />
-      <meta name='twitter:title' content={title} />
-      <meta name='twitter:description' content={description} />
-      <meta name='twitter:image' content={`${publicUrl}/logo512.png`} />
+      <link rel='canonical' href={publicUrl} />
     </Helmet>
   );
 }
