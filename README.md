@@ -20,9 +20,11 @@ yarn start
 
 ## TODO
 
+- [ ] Add meta tags based on current route (`react-helment`)
 - [ ] Add legend with the actual numbers
 - [ ] Show when the information was last updated
 - [ ] Improve routing - maybe use country codes?
+- [ ] Fix viewpoint changing when clicking on the select (on mobile)
 - [ ] Make it prettier (submit a PR if you have ideas!)
 
 ## Acknowledgements
