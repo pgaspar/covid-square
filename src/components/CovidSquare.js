@@ -16,9 +16,9 @@ function CovidSquare({ total, cases, deaths }) {
     height: `${Math.sqrt(deathsPercentage / casesPercentage) * 100}%`,
   };
 
-  const totalTitle = total && `Population: ${total.toLocaleString()}`;
-  const casesTitle = cases && `Confirmed: ${cases.toLocaleString()}`;
-  const deathsTitle = deaths && `Deaths: ${deaths.toLocaleString()}`;
+  const totalTitle = `Population: ${total && total.toLocaleString()}`;
+  const casesTitle = `Confirmed: ${cases && cases.toLocaleString()}`;
+  const deathsTitle = `Deaths: ${deaths && deaths.toLocaleString()}`;
 
   return (
     <div className='CovidSquare' title={totalTitle}>
