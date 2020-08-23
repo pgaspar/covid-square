@@ -13,7 +13,11 @@ function App() {
   let initialCountry = findCountry(urlParams.get('country'));
   if (!initialCountry) {
     initialCountry = findCountry(FALLBACK_COUNTRY);
-    window.history.replaceState({}, null, `?country=${initialCountry.code}`);
+    window.history.replaceState(
+      { country: initialCountry },
+      null,
+      `?country=${initialCountry.code}`
+    );
   }
 
   const [country, setCountry] = useState(initialCountry);
@@ -31,9 +35,21 @@ function App() {
     fetchData();
   }, [country]);
 
+  useEffect(() => {
+    window.onpopstate = (event) => {
+      if (event.state.country) {
+        setCountry(event.state.country);
+      }
+    };
+  });
+
   const onSelect = (e) => {
     const newCountry = findCountry(e.value) || findCountry(FALLBACK_COUNTRY);
-    window.history.pushState({}, null, `?country=${newCountry.code}`);
+    window.history.pushState(
+      { country: newCountry },
+      null,
+      `?country=${newCountry.code}`
+    );
     setCountry(newCountry);
   };
 
