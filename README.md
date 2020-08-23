@@ -20,11 +20,12 @@ yarn start
 
 ## TODO
 
-- [ ] Add legend with the actual numbers
+- [x] Add legend with the actual numbers
+- [ ] Give the app an A11y pass
+- [ ] Add dark/light mode toggle
 - [ ] Setup SSR
 - [ ] Show when the information was last updated
 - [ ] Improve routing - maybe use country codes?
-- [ ] Fix viewpoint changing when clicking on the select (on mobile)
 - [ ] Make it prettier (submit a PR if you have ideas!)
 
 ## Acknowledgements
