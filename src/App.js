@@ -9,15 +9,11 @@ import { countryOptions, findCountry } from './Countries.js';
 const FALLBACK_COUNTRY = 'PRT';
 
 function App() {
-  const urlParams = new URLSearchParams(window.location.search);
-  let initialCountry = findCountry(urlParams.get('country'));
+  const urlCountryCode = window.location.pathname.slice(1);
+  let initialCountry = findCountry(urlCountryCode);
   if (!initialCountry) {
     initialCountry = findCountry(FALLBACK_COUNTRY);
-    window.history.replaceState(
-      { country: initialCountry },
-      null,
-      `?country=${initialCountry.code}`
-    );
+    window.history.replaceState({ country: initialCountry }, null, '/');
   }
 
   const [country, setCountry] = useState(initialCountry);
@@ -48,7 +44,7 @@ function App() {
     window.history.pushState(
       { country: newCountry },
       null,
-      `?country=${newCountry.code}`
+      `/${newCountry.code}`
     );
     setCountry(newCountry);
   };

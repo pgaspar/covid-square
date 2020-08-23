@@ -25,7 +25,7 @@ yarn start
 - [ ] Add dark/light mode toggle
 - [ ] Setup SSR
 - [ ] Show when the information was last updated
-- [ ] Improve routing - maybe use country codes?
+- [ ] Use proper routing?
 - [ ] Make it prettier (submit a PR if you have ideas!)
 
 ## Acknowledgements
