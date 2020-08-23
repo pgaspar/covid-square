@@ -1,0 +1,40 @@
+.Legend {
+  font-size: 14px;
+  text-align: right;
+  position: absolute;
+  right: 8px;
+  bottom: 4px;
+}
+
+.Legend-item {
+  margin-bottom: 4px;
+}
+
+.Legend-item:after {
+  content: '';
+  padding-left: 17px;
+  margin-left: 6px;
+  border: 1px solid white;
+}
+
+.Legend-total:after {
+  background-color: #38a169;
+}
+
+.Legend-cases:after {
+  background-color: #e8e5a7;
+}
+
+.Legend-deaths:after {
+  background-color: #ef1432;
+}
+
+@media screen and (max-width: 620px) {
+  .Legend {
+    font-size: 12px;
+  }
+
+  .Legend-item:after {
+    padding-left: 15px;
+  }
+}

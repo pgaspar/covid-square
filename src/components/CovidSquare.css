@@ -2,6 +2,7 @@
   background-color: #38a169;
   width: 500px;
   height: 500px;
+  position: relative;
 }
 
 .CovidSquare-cases {

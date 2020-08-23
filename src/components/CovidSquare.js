@@ -1,5 +1,6 @@
 import React from 'react';
 import './CovidSquare.css';
+import Legend from './CovidSquare/Legend.js';
 
 function CovidSquare({ total, cases, deaths }) {
   const casesPercentage = cases / total;
@@ -15,11 +16,22 @@ function CovidSquare({ total, cases, deaths }) {
     height: `${Math.sqrt(deathsPercentage / casesPercentage) * 100}%`,
   };
 
+  const totalTitle = total && `Population: ${total.toLocaleString()}`;
+  const casesTitle = cases && `Confirmed: ${cases.toLocaleString()}`;
+  const deathsTitle = deaths && `Deaths: ${deaths.toLocaleString()}`;
+
   return (
-    <div className='CovidSquare'>
-      <div className='CovidSquare-cases' style={casesStyle}>
-        <div className='CovidSquare-deaths' style={deathsStyle}></div>
+    <div className='CovidSquare' title={totalTitle}>
+      <div className='CovidSquare-cases' style={casesStyle} title={casesTitle}>
+        <div
+          className='CovidSquare-deaths'
+          style={deathsStyle}
+          title={deathsTitle}
+        ></div>
       </div>
+      {total && (
+        <Legend total={totalTitle} cases={casesTitle} deaths={deathsTitle} />
+      )}
     </div>
   );
 }
