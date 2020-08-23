@@ -5,6 +5,7 @@ import Head from './components/Head.js';
 import axios from 'axios';
 import Select from 'react-select';
 import { countryOptions, findCountry } from './Countries.js';
+import ReactGA from 'react-ga';
 
 const FALLBACK_COUNTRY = 'PRT';
 
@@ -38,6 +39,10 @@ function App() {
       }
     };
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, [country]);
 
   const onSelect = (e) => {
     const newCountry = findCountry(e.value) || findCountry(FALLBACK_COUNTRY);
