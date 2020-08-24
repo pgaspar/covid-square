@@ -41,7 +41,11 @@ function App() {
   });
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.pageview(
+      window.location.pathname,
+      null,
+      `Covid Square: ${country.name}`
+    );
   }, [country]);
 
   const onSelect = (e) => {
