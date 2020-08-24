@@ -54,6 +54,13 @@ function App() {
     setCountry(newCountry);
   };
 
+  const customSelectStyles = {
+    placeholder: (provided, state) => ({
+      ...provided,
+      color: '#585858',
+    }),
+  };
+
   return (
     <div className='App'>
       <Head country={country} />
@@ -63,6 +70,8 @@ function App() {
           onChange={onSelect}
           placeholder='Select a country...'
           className='App-select'
+          aria-label='Select a country'
+          styles={customSelectStyles}
         />
         <h1 className='App-title'>
           Covid cases and deaths:

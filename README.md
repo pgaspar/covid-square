@@ -21,7 +21,7 @@ yarn start
 ## TODO
 
 - [x] Add legend with the actual numbers
-- [ ] Give the app an A11y pass
+- [x] Give the app an A11y pass
 - [ ] Add dark/light mode toggle
 - [ ] Setup SSR
 - [ ] Show when the information was last updated
