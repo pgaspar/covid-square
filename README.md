@@ -1,6 +1,7 @@
 # Covid Square
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8a7e38f4-628f-440c-94e7-515e5d1e1944/deploy-status)](https://app.netlify.com/sites/covid-square/deploys)
+![CodeQL](https://github.com/pgaspar/covid-square/workflows/CodeQL/badge.svg)
 
 Visualize the number of Covid19 cases and deaths compared to the total population of a country.
 
