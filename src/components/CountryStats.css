@@ -1,0 +1,29 @@
+.CountryStats {
+  margin: auto;
+}
+
+.CountryStats table {
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.CountryStats table th {
+  text-align: right;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: normal;
+  width: 50%;
+}
+
+.CountryStats table td {
+  text-align: left;
+  padding: 2px 0;
+  padding-left: 2px;
+  width: 50%;
+  font-weight: bold;
+}
+
+.CountryStats h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}

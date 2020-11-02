@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import CovidSquare from './components/CovidSquare.js';
+import CountryStats from './components/CountryStats.js';
 import Head from './components/Head.js';
 import axios from 'axios';
 import Select from 'react-select';
@@ -83,6 +84,7 @@ function App() {
         </h1>
         <CovidSquare total={population} cases={cases} deaths={deaths} />
       </header>
+      <CountryStats {...data} />
     </div>
   );
 }

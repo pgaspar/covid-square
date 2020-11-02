@@ -23,9 +23,11 @@ yarn start
 
 - [x] Add legend with the actual numbers
 - [x] Give the app an A11y pass
-- [ ] Add dark/light mode toggle
-- [ ] Setup SSR
+- [x] Setup SSR (via Netlify)
+- [x] Add a Stats section
 - [ ] Show when the information was last updated
+- [ ] Enable comparison between two countries
+- [ ] Add dark/light mode toggle
 - [ ] Use proper routing?
 - [ ] Make it prettier (submit a PR if you have ideas!)
 

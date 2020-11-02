@@ -1,16 +1,17 @@
 .App {
   text-align: center;
+  background-color: #1a202c;
+  color: white;
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
 }
 
 .App-header {
-  background-color: #1a202c;
-  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: white;
-  padding: 40px 0;
+  margin-bottom: 40px;
 }
 
 .App-select {
