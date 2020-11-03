@@ -83,10 +83,14 @@ function App() {
           Covid cases and deaths:
           <span>{country.name}</span>
         </h1>
-        <CovidSquare total={population} cases={cases} deaths={deaths} />
-        <UpdatedAt updatedAt={data.updated} />
       </header>
-      <CountryStats {...data} />
+      <main className='App-main'>
+        <div className='App-square'>
+          <CovidSquare total={population} cases={cases} deaths={deaths} />
+          <UpdatedAt updatedAt={data.updated} />
+        </div>
+        <CountryStats {...data} />
+      </main>
     </div>
   );
 }
