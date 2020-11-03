@@ -3,6 +3,7 @@ import './App.css';
 import CovidSquare from './components/CovidSquare.js';
 import CountryStats from './components/CountryStats.js';
 import Head from './components/Head.js';
+import UpdatedAt from './components/UpdatedAt.js';
 import axios from 'axios';
 import Select from 'react-select';
 import { countryOptions, findCountry } from './Countries.js';
@@ -83,6 +84,7 @@ function App() {
           <span>{country.name}</span>
         </h1>
         <CovidSquare total={population} cases={cases} deaths={deaths} />
+        <UpdatedAt updatedAt={data.updated} />
       </header>
       <CountryStats {...data} />
     </div>
