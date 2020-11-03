@@ -22,6 +22,9 @@ function CountryStats({
   oneDeathPerPeople,
   oneTestPerPeople,
 }) {
+  const hasStatsForToday =
+    todayCases !== 0 && todayDeaths !== 0 && todayRecovered !== 0;
+
   return (
     <section className='CountryStats'>
       <h2>Today's Numbers</h2>
@@ -30,15 +33,27 @@ function CountryStats({
         <tbody>
           <tr>
             <th>Cases</th>
-            <td>{todayCases && todayCases.toLocaleString()}</td>
+            <td>
+              {hasStatsForToday
+                ? todayCases && todayCases.toLocaleString()
+                : 'N/A'}
+            </td>
           </tr>
           <tr>
             <th>Deaths</th>
-            <td>{todayDeaths && todayDeaths.toLocaleString()}</td>
+            <td>
+              {hasStatsForToday
+                ? todayDeaths && todayDeaths.toLocaleString()
+                : 'N/A'}
+            </td>
           </tr>
           <tr>
             <th>Recovered</th>
-            <td>{todayRecovered && todayRecovered.toLocaleString()}</td>
+            <td>
+              {hasStatsForToday
+                ? todayRecovered && todayRecovered.toLocaleString()
+                : 'N/A'}
+            </td>
           </tr>
         </tbody>
       </table>
