@@ -25,7 +25,7 @@ yarn start
 - [x] Give the app an A11y pass
 - [x] Setup SSR (via Netlify)
 - [x] Add a Stats section
-- [ ] Show when the information was last updated
+- [x] Show when the information was last updated
 - [ ] Enable comparison between two countries
 - [ ] Add dark/light mode toggle
 - [ ] Use proper routing?
