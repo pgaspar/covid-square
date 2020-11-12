@@ -13,6 +13,10 @@
   background-color: #ef1432;
 }
 
+.CountryView--right .CovidSquare-cases, .CountryView--right .CovidSquare-deaths {
+  float: right;
+}
+
 @media screen and (max-width: 620px) {
   .CovidSquare {
     width: 300px;

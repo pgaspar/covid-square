@@ -7,26 +7,39 @@
   font-weight: 700;
 }
 
+.CountryView--left .Legend {
+  text-align: left;
+  left: 8px;
+}
+
 .Legend-item {
   margin-bottom: 4px;
 }
 
-.Legend-item:after {
+.CountryView--left .Legend-item:before, .CountryView--right .Legend-item:after, .CountryView--mixed .Legend-item:after {
   content: '';
-  padding-left: 17px;
-  margin-left: 6px;
   border: 1px solid white;
 }
 
-.Legend-total:after {
+.CountryView--right .Legend-item:after, .CountryView--mixed .Legend-item:after {
+  padding-left: 17px;
+  margin-left: 6px;
+}
+
+.CountryView--left .Legend-item:before {
+  padding-right: 17px;
+  margin-right: 6px;
+}
+
+.Legend-total:before, .Legend-total:after {
   background-color: #38a169;
 }
 
-.Legend-cases:after {
+.Legend-cases:before, .Legend-cases:after {
   background-color: #e8e5a7;
 }
 
-.Legend-deaths:after {
+.Legend-deaths:before, .Legend-deaths:after {
   background-color: #ef1432;
 }
 
@@ -35,7 +48,11 @@
     font-size: 12px;
   }
 
-  .Legend-item:after {
+  .CountryView--right .Legend-item:after, .CountryView--mixed .Legend-item:after {
     padding-left: 15px;
+  }
+
+  .CountryView--left .Legend-item:before {
+    padding-right: 15px;
   }
 }

@@ -3,11 +3,11 @@ import CovidSquare from './CovidSquare.js';
 import CountryStats from './CountryStats.js';
 import UpdatedAt from './UpdatedAt.js';
 
-function CountryView({ country, data }) {
+function CountryView({ country, data, align = 'mixed' }) {
   const { cases, deaths, population } = data;
 
   return (
-    <div className={`CountryView`}>
+    <div className={`CountryView CountryView--${align}`}>
       <header className='App-header'>
         <h1 className='App-title'>
           Covid cases and deaths:
