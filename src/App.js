@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import CovidSquare from './components/CovidSquare.js';
-import CountryStats from './components/CountryStats.js';
+import CountryView from './components/CountryView.js';
 import Head from './components/Head.js';
-import UpdatedAt from './components/UpdatedAt.js';
 import axios from 'axios';
 import Select from 'react-select';
 import { countryOptions, findCountry } from './Countries.js';
@@ -21,7 +19,6 @@ function App() {
 
   const [country, setCountry] = useState(initialCountry);
   const [data, setData] = useState({});
-  const { cases, deaths, population } = data;
 
   useEffect(() => {
     async function fetchData() {
@@ -70,27 +67,17 @@ function App() {
   return (
     <div className='App'>
       <Head country={country} />
-      <header className='App-header'>
-        <Select
-          options={countryOptions}
-          onChange={onSelect}
-          placeholder='Select a country...'
-          className='App-select'
-          aria-label='Select a country'
-          styles={customSelectStyles}
-        />
-        <h1 className='App-title'>
-          Covid cases and deaths:
-          <span>{country.name}</span>
-        </h1>
-      </header>
-      <main className='App-main'>
-        <div className='App-square'>
-          <CovidSquare total={population} cases={cases} deaths={deaths} />
-          <UpdatedAt updatedAt={data.updated} />
-        </div>
-        <CountryStats {...data} />
-      </main>
+      <Select
+        options={countryOptions}
+        onChange={onSelect}
+        placeholder='Select a country...'
+        className='App-select'
+        aria-label='Select a country'
+        styles={customSelectStyles}
+      />
+      <div className='Main'>
+        <CountryView country={country} data={data} />
+      </div>
     </div>
   );
 }

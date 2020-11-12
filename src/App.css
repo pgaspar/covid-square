@@ -6,6 +6,12 @@
   min-height: calc(100vh - 80px);
 }
 
+.Main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
@@ -28,6 +34,7 @@
   width: 400px;
   color: #282c34;
   font-size: 1.4rem;
+  margin: auto;
 }
 
 .App-title {
