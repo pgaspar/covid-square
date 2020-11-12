@@ -1,6 +1,9 @@
+body {
+  background-color: #1a202c;
+}
+
 .App {
   text-align: center;
-  background-color: #1a202c;
   color: white;
   padding: 40px 0;
   min-height: calc(100vh - 80px);
