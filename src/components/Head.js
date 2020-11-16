@@ -5,7 +5,7 @@ function Head({ country }) {
   const title = `Covid Square: ${country.name}`;
   const author = 'Pedro Gaspar';
   const description = `Cases and deaths compared to total population`;
-  const publicUrl = process.env.URL || 'https://covid-square.netlify.app';
+  const publicUrl = process.env.URL || 'https://covid-square.com';
 
   return (
     <Helmet>
