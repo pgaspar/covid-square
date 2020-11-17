@@ -26,9 +26,9 @@ yarn start
 - [x] Setup SSR (via Netlify)
 - [x] Add a Stats section
 - [x] Show when the information was last updated
+- [x] Use proper routing?
 - [ ] Enable comparison between two countries
 - [ ] Add dark/light mode toggle
-- [ ] Use proper routing?
 - [ ] Make it prettier (submit a PR if you have ideas!)
 
 ## Acknowledgements
