@@ -1,0 +1,65 @@
+.Home-header {
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 75px;
+}
+
+.Home-logo {
+  margin-right: 14px;
+  height: 80px;
+}
+
+.Home-title {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Home-title h1 {
+  margin: 0;
+  margin-top: -8px;
+}
+
+.Home-subtitle {
+  color: #edf2f7;
+  margin: 0;
+}
+
+.Home-countryListSection {
+  padding-top: 30px;
+}
+
+.Home-countryList {
+  margin-top: -5px;
+}
+
+.Home-countryList a {
+  color: #edf2f7;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.Home-countryList a:hover {
+  color: #bbc1c7;
+}
+
+.Home-countryList div {
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 620px) {
+  .Home-header {
+    width: 80%;
+  }
+
+  .Home-title {
+    font-size: 14px;
+    justify-content: center;
+  }
+}

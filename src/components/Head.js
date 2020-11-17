@@ -3,7 +3,11 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 
 function Head({ innerTitle }) {
-  const title = `Covid Square: ${innerTitle}`;
+  let title = 'Covid Square';
+  if (innerTitle) {
+    title += ` ${innerTitle}`;
+  }
+
   const location = useLocation();
   const canonicalUrl = `https://covid-square.com${location.pathname}`;
 

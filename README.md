@@ -27,6 +27,11 @@ yarn start
 - [x] Add a Stats section
 - [x] Show when the information was last updated
 - [x] Use proper routing?
+- [x] Add an Homepage
+- [ ] Improve Google Analytics usage
+- [ ] Cache assets & image
+- [ ] Explore building the squares as SVGs
+- [ ] Homepage: improve suggested countries list
 - [ ] Enable comparison between two countries
 - [ ] Add dark/light mode toggle
 - [ ] Make it prettier (submit a PR if you have ideas!)
