@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 function Head({ innerTitle }) {
   let title = 'Covid Square';
   if (innerTitle) {
-    title += ` ${innerTitle}`;
+    title += `: ${innerTitle}`;
   }
 
   const location = useLocation();
