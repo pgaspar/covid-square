@@ -28,7 +28,8 @@ yarn start
 - [x] Show when the information was last updated
 - [x] Use proper routing?
 - [x] Add an Homepage
-- [ ] Improve Google Analytics usage
+- [x] Improve Google Analytics tracking
+- [ ] Look into Code splitting
 - [ ] Cache assets & image
 - [ ] Explore building the squares as SVGs
 - [ ] Homepage: improve suggested countries list

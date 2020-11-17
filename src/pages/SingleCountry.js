@@ -4,7 +4,6 @@ import Head from '../components/Head.js';
 import axios from 'axios';
 import Select from 'react-select';
 import { countryOptions, findCountry } from '../Countries.js';
-import ReactGA from 'react-ga';
 import { useParams, useNavigate } from 'react-router-dom';
 import NotFound from './NotFound.js';
 
@@ -26,15 +25,6 @@ function SingleCountry() {
 
     if (country) {
       fetchData();
-
-      // TODO: improve this
-      if (process.env.NODE_ENV === 'production') {
-        ReactGA.pageview(
-          window.location.pathname,
-          null,
-          `Covid Square: ${country.name}`
-        );
-      }
     }
   }, [countryCode, country]);
 
