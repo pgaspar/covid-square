@@ -1,0 +1,13 @@
+.CountrySelect {
+  width: 400px;
+  color: #282c34;
+  font-size: 1.4rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 620px) {
+  .CountrySelect {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}

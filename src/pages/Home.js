@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import Head from '../components/Head.js';
-import Select from 'react-select';
-import { countryOptions, findCountry } from '../Countries.js';
-import { useNavigate, Link } from 'react-router-dom';
+import CountrySelect from '../components/CountrySelect.js';
+import { findCountry } from '../Countries.js';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const POPULAR_COUNTRIES = [
@@ -18,15 +18,6 @@ const POPULAR_COUNTRIES = [
 ];
 
 function Home() {
-  let navigate = useNavigate();
-
-  const customSelectStyles = {
-    placeholder: (provided, state) => ({
-      ...provided,
-      color: '#585858',
-    }),
-  };
-
   const popularCountriesList = useMemo(() => {
     return (
       <div className='Home-countryList'>
@@ -65,15 +56,7 @@ function Home() {
 
       <main>
         <h2>Please select a country below:</h2>
-
-        <Select
-          options={countryOptions}
-          onChange={(el) => navigate(`/${el.value}`)}
-          placeholder='Select a country...'
-          className='App-select'
-          aria-label='Select a country'
-          styles={customSelectStyles}
-        />
+        <CountrySelect />
 
         <div className='Home-countryListSection'>
           <h2>Or pick one of these:</h2>

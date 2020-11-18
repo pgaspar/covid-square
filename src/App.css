@@ -33,13 +33,6 @@ body {
   margin-bottom: 20px;
 }
 
-.App-select {
-  width: 400px;
-  color: #282c34;
-  font-size: 1.4rem;
-  margin: auto;
-}
-
 .App-title {
   font-size: 1.8rem;
   color: #edf2f7;
@@ -60,10 +53,5 @@ body {
 
   .App-title span {
     font-size: 1.7rem;
-  }
-
-  .App-select {
-    width: 80%;
-    font-size: 1.2rem;
   }
 }
