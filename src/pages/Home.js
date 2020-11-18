@@ -4,6 +4,7 @@ import CountrySelect from '../components/CountrySelect.js';
 import { findCountry } from '../Countries.js';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import CovidLine from '../components/CovidLine.js';
 
 const POPULAR_COUNTRIES = [
   'USA',
@@ -20,16 +21,19 @@ const POPULAR_COUNTRIES = [
 function Home() {
   const popularCountriesList = useMemo(() => {
     return (
-      <div className='Home-countryList'>
+      <ul className='Home-countryList'>
         {POPULAR_COUNTRIES.map((countryCode, i) => {
           const country = findCountry(countryCode);
           return (
-            <div key={i}>
-              <Link to={`/${countryCode}`}>{country.name}</Link>
-            </div>
+            <li key={i}>
+              <Link to={`/${countryCode}`}>
+                <div className='Home-countryList-name'>{country.name}</div>
+                <CovidLine />
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     );
   }, []);
 

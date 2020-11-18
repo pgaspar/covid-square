@@ -1,0 +1,21 @@
+.CovidLine {
+  background-color: #38a169;
+  width: 120px;
+  height: 16px;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.CovidLine-cases {
+  background-color: #e8e5a7;
+}
+
+.CovidLine-deaths {
+  background-color: #ef1432;
+}
+
+.CovidLine-cases, .CovidLine-deaths {
+  float: left;
+}
