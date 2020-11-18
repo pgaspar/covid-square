@@ -7,11 +7,12 @@ import CountryList from '../components/CountryList.js';
 const POPULAR_COUNTRIES = [
   'USA',
   'GBR',
-  'FRA',
-  'ESP',
-  'ITA',
   'PRT',
+  'ESP',
+  'FRA',
+  'ITA',
   'CHN',
+  'IND',
   'BRA',
   'RUS',
 ];
