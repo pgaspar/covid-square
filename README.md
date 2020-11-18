@@ -29,10 +29,13 @@ yarn start
 - [x] Use proper routing?
 - [x] Add an Homepage
 - [x] Improve Google Analytics tracking
+- [x] Homepage: improve suggested countries list
+- [ ] Create a sitemap file
+- [ ] Confirm I am using canonical URLs correctly
 - [ ] Look into Code splitting
 - [ ] Cache assets & image
+- [ ] Cache API calls
 - [ ] Explore building the squares as SVGs
-- [ ] Homepage: improve suggested countries list
 - [ ] Enable comparison between two countries
 - [ ] Add dark/light mode toggle
 - [ ] Make it prettier (submit a PR if you have ideas!)

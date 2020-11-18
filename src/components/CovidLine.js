@@ -1,7 +1,7 @@
 import React from 'react';
 import './CovidLine.css';
 
-function CovidLine({ total = 100, cases = 10, deaths = 1 }) {
+function CovidLine({ total, cases, deaths }) {
   const casesPercentage = cases / total;
   const deathsPercentage = deaths / total;
 

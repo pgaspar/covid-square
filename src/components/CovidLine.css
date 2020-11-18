@@ -1,11 +1,11 @@
 .CovidLine {
   background-color: #38a169;
-  width: 120px;
+  width: 240px;
   height: 16px;
-  position: relative;
   border-radius: 2px;
   overflow: hidden;
   flex-shrink: 0;
+  position: relative;
 }
 
 .CovidLine-cases {
@@ -18,4 +18,10 @@
 
 .CovidLine-cases, .CovidLine-deaths {
   float: left;
+}
+
+@media screen and (max-width: 620px) {
+  .CovidLine {
+    width: 180px;
+  }
 }

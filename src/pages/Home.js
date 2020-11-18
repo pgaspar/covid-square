@@ -1,10 +1,8 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import Head from '../components/Head.js';
 import CountrySelect from '../components/CountrySelect.js';
-import { findCountry } from '../Countries.js';
-import { Link } from 'react-router-dom';
 import './Home.css';
-import CovidLine from '../components/CovidLine.js';
+import CountryList from '../components/CountryList.js';
 
 const POPULAR_COUNTRIES = [
   'USA',
@@ -19,24 +17,6 @@ const POPULAR_COUNTRIES = [
 ];
 
 function Home() {
-  const popularCountriesList = useMemo(() => {
-    return (
-      <ul className='Home-countryList'>
-        {POPULAR_COUNTRIES.map((countryCode, i) => {
-          const country = findCountry(countryCode);
-          return (
-            <li key={i}>
-              <Link to={`/${countryCode}`}>
-                <div className='Home-countryList-name'>{country.name}</div>
-                <CovidLine />
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    );
-  }, []);
-
   return (
     <div className='App Home'>
       <Head />
@@ -64,7 +44,7 @@ function Home() {
 
         <div className='Home-countryListSection'>
           <h2>Or pick one of these:</h2>
-          {popularCountriesList}
+          <CountryList countryCodes={POPULAR_COUNTRIES} />
         </div>
       </main>
     </div>

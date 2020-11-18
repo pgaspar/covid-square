@@ -34,40 +34,6 @@
   padding-top: 30px;
 }
 
-.Home-countryList {
-  list-style: none;
-  padding-left: 0;
-  margin: auto;
-  width: 400px;
-}
-
-.Home-countryList li {
-  margin-bottom: 4px;
-  text-align: left;
-  background-color: #2f394e;
-  border-radius: 4px;
-}
-
-.Home-countryList a {
-  color: #edf2f7;
-  font-size: 1.1rem;
-  font-weight: 400;
-  text-decoration: none;
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.Home-countryList li:hover {
-  background-color: #414e6b;
-}
-
-.Home-countryList-name {
-
-}
-
 @media screen and (max-width: 620px) {
   .Home-header {
     width: 80%;

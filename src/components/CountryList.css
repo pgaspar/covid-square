@@ -1,0 +1,35 @@
+.CountryList {
+  list-style: none;
+  padding-left: 0;
+  margin: auto;
+  width: 400px;
+}
+
+.CountryList li {
+  margin-bottom: 4px;
+  text-align: left;
+  background-color: #2f394e;
+  border-radius: 4px;
+}
+
+.CountryList a {
+  color: #edf2f7;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CountryList li:hover {
+  background-color: #414e6b;
+}
+
+@media screen and (max-width: 620px) {
+  .CountryList {
+    width: 80%;
+  }
+}
