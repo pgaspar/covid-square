@@ -30,7 +30,7 @@ yarn start
 - [x] Add an Homepage
 - [x] Improve Google Analytics tracking
 - [x] Homepage: improve suggested countries list
-- [ ] Create a sitemap file
+- [x] Create a sitemap file
 - [ ] Confirm I am using canonical URLs correctly
 - [ ] Look into Code splitting
 - [ ] Cache assets & image
