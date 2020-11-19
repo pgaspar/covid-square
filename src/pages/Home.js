@@ -25,7 +25,7 @@ function Home() {
       <header className='Home-header'>
         <div className='Home-logo'>
           <img
-            src='/logo192.png'
+            src='/logo.svg'
             alt='Covid Square Logo'
             width='80px'
             height='80px'

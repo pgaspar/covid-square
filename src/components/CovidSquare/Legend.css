@@ -32,15 +32,15 @@
 }
 
 .Legend-total:before, .Legend-total:after {
-  background-color: #38a169;
+  background-color: #32936f;
 }
 
 .Legend-cases:before, .Legend-cases:after {
-  background-color: #e8e5a7;
+  background-color: #f5ee9e;
 }
 
 .Legend-deaths:before, .Legend-deaths:after {
-  background-color: #ef1432;
+  background-color: #db0a43;
 }
 
 @media screen and (max-width: 620px) {

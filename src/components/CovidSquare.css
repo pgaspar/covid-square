@@ -1,16 +1,16 @@
 .CovidSquare {
-  background-color: #38a169;
+  background-color: #32936f;
   width: 500px;
   height: 500px;
   position: relative;
 }
 
 .CovidSquare-cases {
-  background-color: #e8e5a7;
+  background-color: #f5ee9e;
 }
 
 .CovidSquare-deaths {
-  background-color: #ef1432;
+  background-color: #db0a43;
 }
 
 .CountryView--right .CovidSquare-cases, .CountryView--right .CovidSquare-deaths {
