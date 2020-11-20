@@ -14,6 +14,10 @@ function Head({ innerTitle }) {
   return (
     <Helmet>
       <title>{title}</title>
+      <meta property='og:title' content={title} />
+      <meta name='twitter:title' content={title} />
+
+      <meta property='og:url' content={canonicalUrl} />
       <link rel='canonical' href={canonicalUrl} />
     </Helmet>
   );
