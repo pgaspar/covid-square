@@ -31,8 +31,8 @@ yarn start
 - [x] Improve Google Analytics tracking
 - [x] Homepage: improve suggested countries list
 - [x] Create a sitemap file
+- [x] Look into Code splitting
 - [ ] Confirm I am using canonical URLs correctly
-- [ ] Look into Code splitting
 - [ ] Cache assets & image
 - [ ] Cache API calls
 - [ ] Explore building the squares as SVGs

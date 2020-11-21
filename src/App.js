@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import './App.css';
-import SingleCountry from './pages/SingleCountry.js';
-import NotFound from './pages/NotFound.js';
-import Home from './pages/Home.js';
 import useAnalytics from './hooks/useAnalytics.js';
 
 import { Routes } from 'react-router-dom';
+
+const Home = lazy(() => import('./pages/Home.js'));
+const SingleCountry = lazy(() => import('./pages/SingleCountry.js'));
+const NotFound = lazy(() => import('./pages/NotFound.js'));
 
 function App() {
   useAnalytics();
 
   return (
-    <Routes>
-      <SingleCountry path='/:countryCode' />
-      <Home path='/' />
-      <NotFound path='*' />
-    </Routes>
+    <Suspense fallback={<div></div>}>
+      <Routes>
+        <SingleCountry path='/:countryCode' />
+        <Home path='/' />
+        <NotFound path='*' />
+      </Routes>
+    </Suspense>
   );
 }
 
