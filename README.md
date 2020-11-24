@@ -32,9 +32,11 @@ yarn start
 - [x] Homepage: improve suggested countries list
 - [x] Create a sitemap file
 - [x] Look into Code splitting
-- [ ] Confirm I am using canonical URLs correctly
+- [x] Confirm I am using canonical URLs correctly
+- [x] Cache API calls (HTTP cache is already working)
+- [x] PWA setup - support offline browsing, cache API fetches
 - [ ] Cache assets & image
-- [ ] Cache API calls
+- [ ] Scroll up when navigating from homepage
 - [ ] Explore building the squares as SVGs
 - [ ] Enable comparison between two countries
 - [ ] Add dark/light mode toggle

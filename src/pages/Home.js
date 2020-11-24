@@ -2,6 +2,7 @@ import React from 'react';
 import Head from '../components/Head.js';
 import CountrySelect from '../components/CountrySelect.js';
 import './Home.css';
+import logo from '../logo.svg';
 import CountryList from '../components/CountryList.js';
 
 const POPULAR_COUNTRIES = [
@@ -24,12 +25,7 @@ function Home() {
 
       <header className='Home-header'>
         <div className='Home-logo'>
-          <img
-            src='/logo.svg'
-            alt='Covid Square Logo'
-            width='80px'
-            height='80px'
-          />
+          <img src={logo} alt='Covid Square Logo' width='80px' height='80px' />
         </div>
         <div className='Home-title'>
           <h1>Covid Square</h1>
