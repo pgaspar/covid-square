@@ -12,6 +12,7 @@ import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { NetworkFirst, CacheFirst } from 'workbox-strategies';
 import { ExpirationPlugin } from 'workbox-expiration';
+import * as googleAnalytics from 'workbox-google-analytics';
 
 clientsClaim();
 
@@ -82,3 +83,7 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+
+// Handle GA requests and queue them when offline so they are delivered when
+// back online. See: https://developers.google.com/web/tools/workbox/modules/workbox-google-analytics
+googleAnalytics.initialize();

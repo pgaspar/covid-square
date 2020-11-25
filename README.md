@@ -36,7 +36,7 @@ yarn start
 - [x] Cache API calls (HTTP cache is already working)
 - [x] PWA setup - support offline browsing, cache API fetches
 - [x] Cache assets & image - now caching via PWA
-- [ ] Add PWA Google Analytics support
+- [x] Add PWA Google Analytics support
 - [ ] Add better support for API fetch errors - consider having a "no connection" view for the PWA
 - [ ] Scroll up when navigating from homepage
 - [ ] Explore building the squares as SVGs
