@@ -10,7 +10,8 @@
 import { clientsClaim } from 'workbox-core';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { NetworkFirst } from 'workbox-strategies';
+import { NetworkFirst, CacheFirst } from 'workbox-strategies';
+import { ExpirationPlugin } from 'workbox-expiration';
 
 clientsClaim();
 
@@ -54,6 +55,23 @@ registerRoute(
     // the app stays offline for a long period of time.
     // The NetworkFirst strategy ensures the cache is refreshed as soon as
     // the app is back online.
+  })
+);
+
+// Runtime caching routes for requests that aren't handled by the precache. In
+// this case, some same-origin requests from public/
+const cachedPaths = [
+  '/manifest.json',
+  '/logo192.png',
+  '/favicon.ico',
+  '/favicon.svg',
+];
+registerRoute(
+  ({ url }) =>
+    url.origin === self.location.origin && cachedPaths.includes(url.pathname),
+  new CacheFirst({
+    cacheName: 'Other Public Assets',
+    plugins: [new ExpirationPlugin({ maxAge: 86400 })],
   })
 );
 
