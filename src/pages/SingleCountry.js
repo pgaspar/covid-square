@@ -23,6 +23,7 @@ function SingleCountry() {
     }
 
     if (country) {
+      setData({});
       fetchData();
     }
   }, [countryCode, country]);

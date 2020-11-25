@@ -2,18 +2,23 @@ import React from 'react';
 import './CovidLine.css';
 
 function CovidLine({ total, cases, deaths }) {
-  const casesPercentage = cases / total;
-  const deathsPercentage = deaths / total;
+  let casesStyle = {};
+  let deathsStyle = {};
 
-  const casesStyle = {
-    width: `${casesPercentage * 100}%`,
-    height: '100%',
-  };
+  if (total !== undefined) {
+    const casesPercentage = cases / total;
+    const deathsPercentage = deaths / total;
 
-  const deathsStyle = {
-    width: `${(deathsPercentage / casesPercentage) * 100}%`,
-    height: '100%',
-  };
+    casesStyle = {
+      width: `${casesPercentage * 100}%`,
+      height: '100%',
+    };
+
+    deathsStyle = {
+      width: `${(deathsPercentage / casesPercentage) * 100}%`,
+      height: '100%',
+    };
+  }
 
   const totalTitle = `Population: ${total && total.toLocaleString()}`;
   const casesTitle = `Confirmed: ${cases && cases.toLocaleString()}`;

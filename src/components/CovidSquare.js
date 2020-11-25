@@ -3,18 +3,23 @@ import './CovidSquare.css';
 import Legend from './CovidSquare/Legend.js';
 
 function CovidSquare({ total, cases, deaths }) {
-  const casesPercentage = cases / total;
-  const deathsPercentage = deaths / total;
+  let casesStyle = {};
+  let deathsStyle = {};
 
-  const casesStyle = {
-    width: `${Math.sqrt(casesPercentage) * 100}%`,
-    height: `${Math.sqrt(casesPercentage) * 100}%`,
-  };
+  if (total !== undefined) {
+    const casesPercentage = cases / total;
+    const deathsPercentage = deaths / total;
 
-  const deathsStyle = {
-    width: `${Math.sqrt(deathsPercentage / casesPercentage) * 100}%`,
-    height: `${Math.sqrt(deathsPercentage / casesPercentage) * 100}%`,
-  };
+    casesStyle = {
+      width: `${Math.sqrt(casesPercentage) * 100}%`,
+      height: `${Math.sqrt(casesPercentage) * 100}%`,
+    };
+
+    deathsStyle = {
+      width: `${Math.sqrt(deathsPercentage / casesPercentage) * 100}%`,
+      height: `${Math.sqrt(deathsPercentage / casesPercentage) * 100}%`,
+    };
+  }
 
   const totalTitle = `Population: ${total && total.toLocaleString()}`;
   const casesTitle = `Confirmed: ${cases && cases.toLocaleString()}`;
