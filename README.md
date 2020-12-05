@@ -38,7 +38,8 @@ yarn start
 - [x] Cache assets & image - now caching via PWA
 - [x] Add PWA Google Analytics support
 - [ ] Add better support for API fetch errors - consider having a "no connection" view for the PWA
-- [ ] Scroll up when navigating from homepage
+- [x] Scroll up when navigating from homepage
+- [ ] Add About section
 - [ ] Explore building the squares as SVGs
 - [ ] Enable comparison between two countries
 - [ ] Add dark/light mode toggle

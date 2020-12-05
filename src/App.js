@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import './App.css';
 import useAnalytics from './hooks/useAnalytics.js';
+import useScrollToTop from './hooks/useScrollToTop.js';
 
 import { Routes } from 'react-router-dom';
 
@@ -10,6 +11,7 @@ const NotFound = lazy(() => import('./pages/NotFound.js'));
 
 function App() {
   useAnalytics();
+  useScrollToTop();
 
   return (
     <Suspense fallback={<div></div>}>
