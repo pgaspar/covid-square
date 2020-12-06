@@ -46,6 +46,10 @@ body {
   font-weight: bold;
 }
 
+.App a {
+  color: #edf2f7;
+}
+
 @media screen and (max-width: 620px) {
   .App-title {
     font-size: 1.5rem;

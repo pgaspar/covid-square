@@ -34,13 +34,29 @@
   padding-top: 30px;
 }
 
+.Home-about {
+  width: 400px;
+  margin: auto;
+  padding-top: 30px;
+  color: #edf2f7;
+}
+
+.Home-about p {
+  text-align: left;
+  line-height: 1.4em;
+}
+
 @media screen and (max-width: 620px) {
-  .Home-header {
+  .Home-header, .Home-about {
     width: 80%;
   }
 
   .Home-title {
     font-size: 14px;
     justify-content: center;
+  }
+
+  .Home-about p {
+    font-size: 15px;
   }
 }
