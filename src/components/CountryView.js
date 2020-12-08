@@ -25,7 +25,7 @@ function CountryView({ country, data, align = 'mixed' }) {
 
       <nav>
         <Link to={'/'} className='Button'>
-          ⬅ Back
+          &larr; Back
         </Link>
       </nav>
     </div>
