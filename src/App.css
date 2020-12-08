@@ -50,6 +50,17 @@ body {
   color: #edf2f7;
 }
 
+.Button {
+  display: inline-block;
+  background-color: #2f394e;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.Button:hover {
+  background-color: #414e6b;
+}
+
 @media screen and (max-width: 620px) {
   .App-title {
     font-size: 1.5rem;
