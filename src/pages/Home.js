@@ -2,6 +2,7 @@ import React from 'react';
 import Head from '../components/Head.js';
 import CountrySelect from '../components/CountrySelect.js';
 import ExternalLink from '../components/ExternalLink.js';
+import BuyMeACoffee from '../components/BuyMeACoffee.js';
 import './Home.css';
 import logo from '../logo.svg';
 import CountryList from '../components/CountryList.js';
@@ -80,6 +81,8 @@ function Home() {
             </ExternalLink>{' '}
             for his help in my understanding of the basics of PWAs 🙌
           </p>
+
+          <BuyMeACoffee />
         </section>
       </main>
     </div>
