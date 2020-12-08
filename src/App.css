@@ -54,11 +54,15 @@ body {
   display: inline-block;
   background-color: #2f394e;
   border-radius: 4px;
-  padding: 6px 12px;
+  padding: 7px 12px;
 }
 
 .Button:hover {
   background-color: #414e6b;
+}
+
+a.Button, .Button a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 620px) {

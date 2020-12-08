@@ -2,6 +2,7 @@ import React from 'react';
 import CovidSquare from './CovidSquare.js';
 import CountryStats from './CountryStats.js';
 import UpdatedAt from './UpdatedAt.js';
+import { Link } from 'react-router-dom';
 
 function CountryView({ country, data, align = 'mixed' }) {
   const { cases, deaths, population } = data;
@@ -21,6 +22,12 @@ function CountryView({ country, data, align = 'mixed' }) {
         </div>
         <CountryStats {...data} />
       </main>
+
+      <nav>
+        <Link to={'/'} className='Button'>
+          ⬅ Back
+        </Link>
+      </nav>
     </div>
   );
 }
